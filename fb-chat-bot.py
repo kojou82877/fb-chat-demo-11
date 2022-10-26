@@ -479,16 +479,10 @@ class ChatBot(Client):
                 reply = "Oh Atif The God  Father of Haters kid."
                 sendMsg()
             elif ("gand dede" in msg):
-                reply = "gand dede nhi Land lele."
+                reply = "land lele bhai :)."
                 sendMsg()
             elif ("akku" in msg):
                 reply = "love you akku (akhil) 😘❤️"
-                sendMsg()
-            elif ("Rachit" in msg):
-                reply = "Wahi rachit jo atif ko gand deta hai ??."
-                sendMsg()
-            elif ("Akhil" in msg):
-                reply = "Wahi akhil jo atif ko gand deta hai ??"
                 sendMsg()
             elif ("I can't live without you" in msg):
                 reply = "Die Then."
@@ -497,22 +491,25 @@ class ChatBot(Client):
                 reply = "Don't worry i am with you."
                 sendMsg()
             elif ("Gf" in msg):
-                reply = "you mean randi?"
+                reply = "you mean Dhokebaaz??"
                 sendMsg()
             elif ("i love you" in msg):
-                reply = "sorry i'm already booked :)"
+                reply = "I love you too <3"
                 sendMsg()
             elif ("ex" in msg):
-                reply = "Nagin bol bhai ex nhi."
+                reply = "nagin bol bhai ex nhi"
                 sendMsg()
             elif ("riyan" in msg):
                 reply = "akhil ka beta he riyan "
                 sendMsg()
             elif ("who is kammo" in msg):
-                reply = "Kammo is my second love. :)"
+                reply = "Kammo is my second love :)"
                 sendMsg()
             elif("help" in msg):
                 reply = "Sure! What should I do?"
+                sendMsg()
+            elif("rachit" in msg):
+                reply = "wahi rachit jo ek number ka gandu hai??"
                 sendMsg()
             elif("boyfriend" in msg):
                 reply = "Kojou is my boyfriend"
