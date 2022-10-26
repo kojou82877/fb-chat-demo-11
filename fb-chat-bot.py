@@ -478,7 +478,7 @@ class ChatBot(Client):
             elif ("Akhil" in msg):
                 reply = "Akhiil to riyan ka beta hai :)."
                 sendMsg()
-            elif ("Ishita" in msg):
+            elif ("ishita" in msg):
                 reply = "Kammo and ishita are One heart and One soul <3."
                 sendMsg()
             elif ("i love u" in msg):
