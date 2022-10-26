@@ -478,7 +478,7 @@ class ChatBot(Client):
             elif("help" in msg):
                 reply = "Sure! What should I do?"
                 sendMsg()
-            elif("who is your Boyfriend" in msg):
+            elif("boyfriend" in msg):
                 reply = "Kojou is my boyfriend"
                 sendMsg()
             elif("crazy" in msg):
