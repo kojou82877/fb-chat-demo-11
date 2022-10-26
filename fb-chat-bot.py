@@ -475,6 +475,12 @@ class ChatBot(Client):
             elif ("busy" in msg):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
+            elif ("Akhil" in msg):
+                reply = "Akhil to riyaan ka beta hai :)."
+                sendMsg()
+            elif ("Ishita" in msg):
+                reply = "Kammo and ishita are One heart and One soul <3."
+                sendMsg()
             elif ("i love u" in msg):
                 reply = "I love you more <3"
                 sendMsg()
