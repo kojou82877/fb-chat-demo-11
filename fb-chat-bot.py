@@ -475,37 +475,37 @@ class ChatBot(Client):
             elif ("busy" in msg):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
-elif ("Atif" in msg):
+            elif ("Atif" in msg):
                 reply = "Oh Atif The God  Father of Haters kid."
                 sendMsg()
-elif ("Gand dede" in msg):
+            elif ("Gand dede" in msg):
                 reply = "Land lele."
                 sendMsg()
-elif ("Akku" in msg):
+            elif ("Akku" in msg):
                 reply = "love you akhil 😘❤️"
                 sendMsg()
-elif ("Rachit" in msg):
+            elif ("Rachit" in msg):
                 reply = "Wahi Rachit Jo Atif ko gand deta hai."
                 sendMsg()
-elif ("Akhil" in msg):
+            elif ("Akhil" in msg):
                 reply = "Wahi Akhil Jo Atif ko gand deta hai."
                 sendMsg()
-elif ("I can't live with u" in msg):
+            elif ("I can't live with u" in msg):
                 reply = "I can die with u."
                 sendMsg()
-elif ("sad" in msg):
+            elif ("sad" in msg):
                 reply = "Don't worry i am with you."
                 sendMsg()
-elif ("Gf" in msg):
+            elif ("Gf" in msg):
                 reply = "You mean dhokebaaz."
                 sendMsg()
-elif ("i love u" in msg):
+            elif ("i love u" in msg):
                 reply = "sorry I'm already booked🙂"
                 sendMsg()
-elif ("ex" in msg):
+            elif ("ex" in msg):
                 reply = "Nagin bol bhai ex nhi."
                 sendMsg()
-elif ("riyan" in msg):
+            elif ("riyan" in msg):
                 reply = "akhil ka beta he riyan "
                 sendMsg()
             elif ("who is kammo" in msg):
