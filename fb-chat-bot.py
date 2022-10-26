@@ -476,7 +476,7 @@ class ChatBot(Client):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
             elif ("Akhil" in msg):
-                reply = "Akhil to riyaan ka beta hai :)."
+                reply = "Akhiil to riyan ka beta hai :)."
                 sendMsg()
             elif ("Ishita" in msg):
                 reply = "Kammo and ishita are One heart and One soul <3."
@@ -490,9 +490,6 @@ class ChatBot(Client):
             elif ("hi bot" in msg):
                 reply = "hello i'm here :)"
                 sendMsg()
-            elif ("ishita" in msg):
-                reply = "ishita is a play girl don't talk to her :("
-                sendMsg()
             elif ("No" in msg):
                 reply = "Yes!"
                 sendMsg()
@@ -505,23 +502,14 @@ class ChatBot(Client):
             elif ("akku" in msg):
                 reply = "love you akku (akhil) 😘❤️"
                 sendMsg()
-            elif ("I can't live without you" in msg):
-                reply = "Die Then."
-                sendMsg()
             elif ("i'm sad" in msg):
                 reply = "Don't worry i am with you."
-                sendMsg()
-            elif ("Gf" in msg):
-                reply = "you mean Dhokebaaz??"
                 sendMsg()
             elif ("i love you" in msg):
                 reply = "I love you too <3"
                 sendMsg()
-            elif ("ex" in msg):
-                reply = "nagin bol bhai ex nhi"
-                sendMsg()
             elif ("riyan" in msg):
-                reply = "akhil ka beta he riyan "
+                reply = "Akhiil ka beta he riyaan "
                 sendMsg()
             elif ("who is kammo" in msg):
                 reply = "Kammo is my second love :)"
