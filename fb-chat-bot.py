@@ -485,22 +485,22 @@ class ChatBot(Client):
                 reply = "love you akku (akhil) 😘❤️"
                 sendMsg()
             elif ("Rachit" in msg):
-                reply = "Wahi Rachit Jo Atif ko gand deta hai."
+                reply = "Wahi rachit jo atif ko gand deta hai ??."
                 sendMsg()
             elif ("Akhil" in msg):
-                reply = "Wahi Akhil Jo Atif ko gand deta hai."
+                reply = "Wahi akhil jo atif ko gand deta hai ??"
                 sendMsg()
-            elif ("I can't live with u" in msg):
-                reply = "I can die with u."
+            elif ("I can't live without you" in msg):
+                reply = "Die Then."
                 sendMsg()
-            elif ("sad" in msg):
+            elif ("i'm sad" in msg):
                 reply = "Don't worry i am with you."
                 sendMsg()
             elif ("Gf" in msg):
-                reply = "You mean dhokebaaz."
+                reply = "you mean randi?"
                 sendMsg()
-            elif ("i love u" in msg):
-                reply = "sorry I'm already booked🙂"
+            elif ("i love you" in msg):
+                reply = "sorry i'm already booked :)"
                 sendMsg()
             elif ("ex" in msg):
                 reply = "Nagin bol bhai ex nhi."
