@@ -478,8 +478,8 @@ class ChatBot(Client):
             elif("help" in msg):
                 reply = "Sure! What should I do?"
                 sendMsg()
-            elif("clever" in msg):
-                reply = "Yes, i am clever. hope you will be clever soon."
+            elif("who is your Boyfriend" in msg):
+                reply = "Kojou is my boyfriend"
                 sendMsg()
             elif("crazy" in msg):
                 reply = "Anything wrong about that."
