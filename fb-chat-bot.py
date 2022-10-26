@@ -475,6 +475,9 @@ class ChatBot(Client):
             elif ("busy" in msg):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
+            elif ("who kammo" in msg):
+                reply = "Kammo Mera pyar hai. :) <3"
+                sendMsg()
             elif("help" in msg):
                 reply = "Sure! What should I do?"
                 sendMsg()
