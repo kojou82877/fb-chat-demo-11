@@ -475,14 +475,14 @@ class ChatBot(Client):
             elif ("busy" in msg):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
-            elif ("atif" in msg):
+            elif ("who is atif" in msg):
                 reply = "Oh Atif The God  Father of Haters kid."
                 sendMsg()
-            elif ("Gand dede" in msg):
-                reply = "Land lele."
+            elif ("gand dede" in msg):
+                reply = "gand dede nhi Land lele."
                 sendMsg()
-            elif ("Akku" in msg):
-                reply = "love you akhil 😘❤️"
+            elif ("akku" in msg):
+                reply = "love you akku (akhil) 😘❤️"
                 sendMsg()
             elif ("Rachit" in msg):
                 reply = "Wahi Rachit Jo Atif ko gand deta hai."
