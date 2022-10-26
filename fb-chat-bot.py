@@ -475,6 +475,21 @@ class ChatBot(Client):
             elif ("busy" in msg):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
+            elif ("i love u" in msg):
+                reply = "I love you more <3"
+                sendMsg()
+            elif ("really love me" in msg):
+                reply = "yes i do <3"
+                sendMsg()
+            elif ("hi bot" in msg):
+                reply = "hello i'm here :)"
+                sendMsg()
+            elif ("ishita" in msg):
+                reply = "ishita is a play girl don't talk to her :("
+                sendMsg()
+            elif ("No" in msg):
+                reply = "Yes!"
+                sendMsg()
             elif ("who is atif" in msg):
                 reply = "Oh Atif The God  Father of Haters kid."
                 sendMsg()
