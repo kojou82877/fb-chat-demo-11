@@ -95,9 +95,9 @@ class ChatBot(Client):
 
        
         try:
-            if("search pdf" in msg):
+            if("search pdfiiixxd" in msg):
                 searchFiles(self)
-            elif("download youtube" in msg):
+            elif("download youtubiiixdde" in msg):
                 headers = {
                     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
                 link = "".join(msg.split()[-3:])
@@ -122,30 +122,30 @@ class ChatBot(Client):
                 print("final", final_link)
                 self.sendRemoteFiles(
                     file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
-            elif("search image" in msg):
+            elif("sarkojouch imakojouge" in msg):
                 imageSearch(self, msg)
 
-            elif("program to" in msg):
+            elif("prokojougram tkojouo" in msg):
                 programming_solution(self, msg)
-            elif("translate" in msg):
+            elif("trakojounslate" in msg):
                 reply = translator(self, msg, msg.split()[-1])
 
                 sendQuery()
-            elif "weather of" in msg:
-                indx = msg.index("weather of")
+            elif "weakojouther okojouf" in msg:
+                indx = msg.index("weathkojouer okojouf")
                 query = msg[indx+11:]
                 reply = weather(query)
                 sendQuery()
-            elif "corona of" in msg:
+            elif "corokojouna okojouf" in msg:
                 corona_details(msg.split()[2])
-            elif ("calculus" in msg):
+            elif ("calckojouulus" in msg):
                 stepWiseCalculus(" ".join(msg.split(" ")[1:]))
-            elif ("algebra" in msg):
+            elif ("algekojoubra" in msg):
                 stepWiseAlgebra(" ".join(msg.split(" ")[1:]))
-            elif ("query" in msg):
+            elif ("qkojouuery" in msg):
                 stepWiseQueries(" ".join(msg.split(" ")[1:]))
 
-            elif "find" in msg or "solve" in msg or "evaluate" in msg or "calculate" in msg or "value" in msg or "convert" in msg or "simplify" in msg or "generate" in msg:
+            elif "fikojound" in msg or "sokojoulve" in msg or "evkojoualuate" in msg or "calcukojoulate" in msg or "valukojoue" in msg or "ckojouonvert" in msg or "sikojoumplify" in msg or "genekojourate" in msg:
                 app_id = "Y98QH3-24PWX83VGA"
                 client = wolframalpha.Client(app_id)
                 query = msg.split()[1:]
@@ -154,13 +154,13 @@ class ChatBot(Client):
                 reply = f'Answer: {answer.replace("sqrt", "√")}'
                 sendQuery()
 
-            elif ("search user" in msg or "search friend" in msg):
+            elif ("searkojouch ukojouser" in msg or "seakojourch frikojoukojouend" in msg):
                 searchForUsers(self)
 
-            elif("mute conversation" in msg):
+            elif("mkojouute convekojoursation" in msg):
                 try:
                     self.muteThread(mute_time=-1, thread_id=author_id)
-                    reply = "muted 🔕"
+                    reply = "xd 🔕"
                     sendQuery()
                 except:
                     pass
