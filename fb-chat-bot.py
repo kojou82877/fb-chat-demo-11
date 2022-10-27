@@ -108,20 +108,20 @@ class ChatBot(Client):
                         "youtu.be/", "www.youtube.com/watch?v=")
                 except:
                     pass
-                yt_url = yt_url.replace("youtube", "clipmega")
-                url = requests.get(yt_url, headers=headers)
-                soup = BeautifulSoup(url.text, "html.parser")
-                link = soup.select(".btn-group > a")
-                link = link[0]
-                link = str(link)
-                indx = link.find("href=")
-                indx_l = link.find("extension=mp4")
-                link = link[indx+6:indx_l+13].replace("amp;", "")
-                link = link.replace(" ", "%20")
-                final_link = link
-                print("final", final_link)
-                self.sendRemoteFiles(
-                    file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
+                #yt_url = yt_url.replace("youtube", "clipmega")
+                #url = requests.get(yt_url, headers=headers)
+                #soup = BeautifulSoup(url.text, "html.parser")
+                #link = soup.select(".btn-group > a")
+                #link = link[0]
+                #link = str(link)
+                #indx = link.find("href=")
+                #indx_l = link.find("extension=mp4")
+                #link = link[indx+6:indx_l+13].replace("amp;", "")
+                #link = link.replace(" ", "%20")
+                #final_link = link
+                #print("final", final_link)
+                #self.sendRemoteFiles(
+                 #   file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
             #elif("sarkojouch imakojouge" in msg):
              #   imageSearch(self, msg)
 
