@@ -164,65 +164,89 @@ class ChatBot(Client):
                     sendQuery()
                 except:
                     pass
-            elif ("busy" in msg):
-                reply = "Nobody is busy. Only things are prioritized."
+            elif ("a" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif("help" in msg):
-                reply = "Sure! What should I do?"
+            elif ("b" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif("clever" in msg):
-                reply = "Yes, i am clever. hope you will be clever soon."
+            elif ("c" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif("crazy" in msg):
-                reply = "Anything wrong about that."
+            elif ("d" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("are funny" in msg):
-                reply = "No. I am not. You are."
+            elif ("e" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("marry me" in msg):
-                reply = "Yes, if you are nice and kind girl. But if you are boy RIP."
+            elif ("f" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("you from" in msg):
-                reply = "I am from Nepal. Currently living in Kathmandu"
+            elif ("g" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("you sure" in msg):
-                reply = "Yes. I'm sure."
+            elif ("h" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("great" in msg):
-                reply = "Thanks!"
+            elif ("i" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("no problem" in msg):
-                reply = "Okay😊🙂"
+            elif ("j" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("thank you" in msg):
-                reply = "You're welcome😊🙂"
+            elif ("k" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("thanks" in msg):
-                reply = "You're welcome🙂"
+            elif ("l" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("well done" in msg):
-                reply = "Thanks🙂"
+            elif ("m" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("wow" in msg):
-                reply = "🙂😊"
+            elif ("n" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("wow" in msg):
-                reply = "🙂😊"
+            elif ("o" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("bye" in msg):
-                reply = "bye👋"
+            elif ("p" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("good morning" in msg):
-                reply = "Good Morning🌅🌺"
+            elif ("q" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("goodnight" in msg):
-                reply = "good night🌃🌙"
+            elif ("r" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("good night" in msg or msg == "gn"):
-                reply = "good night🌃🌙"
+            elif ("s" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
-            elif ("hello" in msg):
-                reply = "Hi"
+            elif ("t" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif ("w" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif ("x" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif ("y" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif ("z" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif (":D" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif (":P" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif (":)" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                sendMsg()
+            elif ("(y)" in msg):
+                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
             elif ("hello" in msg or "hlo" in msg):
                 reply = "Hi"
