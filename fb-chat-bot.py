@@ -94,7 +94,7 @@ class ChatBot(Client):
                  #             thread_id=thread_id, thread_type=ThreadType.USER)
 
        
-        try:
+        #try:
             #if("search pdfiiixxd" in msg):
              #   searchFiles(self)
             #elif("download youtubiiixdde" in msg):
