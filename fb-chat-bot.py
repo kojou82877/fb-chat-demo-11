@@ -265,7 +265,7 @@ class ChatBot(Client):
                         user = self.fetchUserInfo(f"{author_id}")[
                             f"{author_id}"]
                         username = user.name.split()[0]
-                        reply = f"{username} just unsent a video"
+                        #reply = f"{username} just unsent a video"
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
                         self.sendRemoteFiles(
@@ -282,7 +282,7 @@ class ChatBot(Client):
                         user = self.fetchUserInfo(f"{author_id}")[
                             f"{author_id}"]
                         username = user.name.split()[0]
-                        reply = f"{username} just unsent an image"
+                        #reply = f"{username} just unsent an image"
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
                         self.sendRemoteFiles(
