@@ -303,46 +303,46 @@ class ChatBot(Client):
             except:
                 pass
 
-    def onColorChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = "You changed the theme ✌️😎"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onColorChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
+     #   reply = "You changed the theme ✌️😎"
+      #  self.send(Message(text=reply), thread_id=thread_id,
+       #           thread_type=thread_type)
 
-    def onEmojiChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = "You changed the emoji 😎. Great!"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onEmojiChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
+     #   reply = "You changed the emoji 😎. Great!"
+      #  self.send(Message(text=reply), thread_id=thread_id,
+       #           thread_type=thread_type)
 
-    def onImageChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = "This image looks nice. 💕🔥"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onImageChange(self, mid=None, author_id=None, new_color=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
+     #   reply = "This image looks nice. 💕🔥"
+      #  self.send(Message(text=reply), thread_id=thread_id,
+       #           thread_type=thread_type)
 
-    def onNicknameChange(self, mid=None, author_id=None, new_nickname=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = f"You just changed the nickname to {new_nickname} But why? 😁🤔😶"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onNicknameChange(self, mid=None, author_id=None, new_nickname=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
+     #   reply = f"You just changed the nickname to {new_nickname} But why? 😁🤔😶"
+      #  self.send(Message(text=reply), thread_id=thread_id,
+       #           thread_type=thread_type)
 
-    def onReactionRemoved(self, mid=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
-        reply = "You just removed reaction from the message."
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onReactionRemoved(self, mid=None, author_id=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
+     #   reply = "You just removed reaction from the message."
+      #  self.send(Message(text=reply), thread_id=thread_id,
+       #           thread_type=thread_type)
 
-    def onCallStarted(self, mid=None, caller_id=None, is_video_call=None, thread_id=None, thread_type=None, ts=None, metadata=None, msg=None, ** kwargs):
-        reply = "You just started a call 📞🎥"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onCallStarted(self, mid=None, caller_id=None, is_video_call=None, thread_id=None, thread_type=None, ts=None, metadata=None, msg=None, ** kwargs):
+     #   reply = "You just started a call 📞🎥"
+      #  self.send(Message(text=reply), thread_id=thread_id,
+       #           thread_type=thread_type)
 
-    def onCallEnded(self, mid=None, caller_id=None, is_video_call=None, thread_id=None, thread_type=None, ts=None, metadata=None, msg=None, ** kwargs):
-        reply = "Bye 👋🙋‍♂️"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onCallEnded(self, mid=None, caller_id=None, is_video_call=None, thread_id=None, thread_type=None, ts=None, metadata=None, msg=None, ** kwargs):
+     #   reply = "Bye 👋🙋‍♂️"
+      #  self.send(Message(text=reply), thread_id=thread_id,
+       #           thread_type=thread_type)
 
-    def onUserJoinedCall(mid=None, joined_id=None, is_video_call=None,
-                         thread_id=None, thread_type=None, **kwargs):
-        reply = f"New user with user_id {joined_id} has joined a call"
-        self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
+    #def onUserJoinedCall(mid=None, joined_id=None, is_video_call=None,
+     #                    thread_id=None, thread_type=None, **kwargs):
+      #  reply = f"New user with user_id {joined_id} has joined a call"
+       # self.send(Message(text=reply), thread_id=thread_id,
+        #          thread_type=thread_type)
 
 
 cookies = {
