@@ -256,7 +256,7 @@ class ChatBot(Client):
                 if("//video.xx.fbcdn" in unsent_msg):
 
                     if(thread_type == ThreadType.USER):
-                        reply = f"You just unsent a video"
+                        
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
                         self.sendRemoteFiles(
@@ -273,7 +273,7 @@ class ChatBot(Client):
                 elif("//scontent.xx.fbc" in unsent_msg):
 
                     if(thread_type == ThreadType.USER):
-                        reply = f"You just unsent an image"
+                        
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
                         self.sendRemoteFiles(
