@@ -122,15 +122,15 @@ class ChatBot(Client):
                 print("final", final_link)
                 self.sendRemoteFiles(
                     file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
-            elif("sarkojouch imakojouge" in msg):
-                imageSearch(self, msg)
+            #elif("sarkojouch imakojouge" in msg):
+             #   imageSearch(self, msg)
 
-            elif("prokojougram tkojouo" in msg):
-                programming_solution(self, msg)
-            elif("trakojounslate" in msg):
-                reply = translator(self, msg, msg.split()[-1])
+            #elif("prokojougram tkojouo" in msg):
+             #   programming_solution(self, msg)
+            #elif("trakojounslate" in msg):
+             #   reply = translator(self, msg, msg.split()[-1])
 
-                sendQuery()
+                #sendQuery()
             elif "weakojouther okojouf" in msg:
                 indx = msg.index("weathkojouer okojouf")
                 query = msg[indx+11:]
