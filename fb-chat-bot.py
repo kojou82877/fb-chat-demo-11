@@ -145,7 +145,7 @@ class ChatBot(Client):
             elif ("qkojouuery" in msg):
                 stepWiseQueries(" ".join(msg.split(" ")[1:]))
 
-            elif "fikojound" in msg or "sokojoulve" in msg or "evkojoualuate" in msg or "calcukojoulate" in msg or "valukojoue" in msg or "ckojouonvert" in msg or "sikojoumplify" in msg or "genekojourate" in msg:
+            elif "fikojound" in msg:
                 app_id = "Y98QH3-24PWX83VGA"
                 client = wolframalpha.Client(app_id)
                 query = msg.split()[1:]
