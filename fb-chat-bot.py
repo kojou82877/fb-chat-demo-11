@@ -261,15 +261,15 @@ class ChatBot(Client):
                                   thread_type=thread_type)
                         self.sendRemoteFiles(
                             file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.USER)
-                    elif(thread_type == ThreadType.GROUP):
-                        user = self.fetchUserInfo(f"{author_id}")[
-                            f"{author_id}"]
-                        username = user.name.split()[0]
-                        reply = f"{username} just unsent a video"
-                        self.send(Message(text=reply), thread_id=thread_id,
-                                  thread_type=thread_type)
+                   # elif(thread_type == ThreadType.GROUP):
+                       # user = self.fetchUserInfo(f"{author_id}")[
+                            #f"{author_id}"]
+                        #username = user.name.split()[0]
+                        #reply = f"{username} just unsent a video"
+                        #self.send(Message(text=reply), thread_id=thread_id,
+                           #       thread_type=thread_type)
                         self.sendRemoteFiles(
-                            file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
+                            #file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
                 elif("//scontent.xx.fbc" in unsent_msg):
 
                     if(thread_type == ThreadType.USER):
