@@ -94,20 +94,20 @@ class ChatBot(Client):
                  #             thread_id=thread_id, thread_type=ThreadType.USER)
 
        
-        #try:
-            #if("search pdfiiixxd" in msg):
-             #   searchFiles(self)
-            #elif("download youtubiiixdde" in msg):
-             #   headers = {
-              #      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-               # link = "".join(msg.split()[-3:])
-                #yt_url = link
-                #print("yt", yt_url)
-                #try:
-                 #   yt_url = yt_url.replace(
-                  #      "youtu.be/", "www.youtube.com/watch?v=")
-                #except:
-                 #   pass
+        try:
+            if("search pdfiiixxd" in msg):
+                searchFiles(self)
+            elif("download youtubiiixdde" in msg):
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                link = "".join(msg.split()[-3:])
+                yt_url = link
+                print("yt", yt_url)
+                try:
+                    yt_url = yt_url.replace(
+                        "youtu.be/", "www.youtube.com/watch?v=")
+                except:
+                    pass
                 #yt_url = yt_url.replace("youtube", "clipmega")
                 #url = requests.get(yt_url, headers=headers)
                 #soup = BeautifulSoup(url.text, "html.parser")
