@@ -16,6 +16,21 @@ from difflib import SequenceMatcher, get_close_matches
 
 class ChatBot(Client):
 
+    def onMessage(self, mid=None, author_id=None, message_object=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
+        try:
+            msg = str(message_object).split(",")[15][14:-1]
+
+            if ("//video.xx.fbcdn" in msg):
+                msg = msg
+
+            else:
+                msg = str(message_object).split(",")[19][20:-1]
+        except:
+            try:
+                msg = (message_object.text).lower()
+                print(msg)
+            except:
+                pass
         def sendMsg():
             if (author_id != self.uid):
                 self.send(Message(text=reply), thread_id=thread_id,
@@ -47,6 +62,314 @@ class ChatBot(Client):
                 conn.close()
             except:
                 pass
+
+        def corona_details(country_name):
+            from datetime import date, timedelta
+            today = date.today()
+            today = date.today()
+            yesterday = today - timedelta(days=1)
+
+            url = "https://covid-193.p.rapidapi.com/history"
+
+            querystring = {"country": country_name, "day": yesterday}
+
+            headers = {
+                'x-rapidapi-key': "801ba934d6mshf6d2ea2be5a6a40p188cbejsn09635ee54c45",
+                'x-rapidapi-host': "covid-193.p.rapidapi.com"
+            }
+
+            response = requests.request(
+                "GET", url, headers=headers, params=querystring)
+            data_str = response.text
+
+            data = eval(data_str.replace("null", "None"))
+            country = data["response"][0]["country"]
+            new_cases = data["response"][0]["cases"]["new"]
+            active_cases = data["response"][0]["cases"]["active"]
+            total_cases = data["response"][0]["cases"]["total"]
+            critical_cases = data["response"][0]["cases"]["critical"]
+            total_deaths = data["response"][0]["deaths"]["total"]
+            total_recovered = data["response"][0]["cases"]["recovered"]
+            new_deaths = data["response"][0]["deaths"]["new"]
+            reply = f'new cases: {new_cases}\n new_cases1 = {new_cases.replace("+", "")}\nnew_deaths1 = {new_deaths.replace("+", "")}\nactive cases: {active_cases}\nnew deaths: {new_deaths} total deaths: {total_deaths} \ncritical cases: {critical_cases}\ntotal cases: {total_cases}\ntotal recovered: {total_recovered}'
+            self.send(Message(text=reply), thread_id=thread_id,
+                      thread_type=thread_type)
+
+        def weather(city):
+            api_address = "https://api.openweathermap.org/data/2.5/weather?appid=0c42f7f6b53b244c78a418f4f181282a&q="
+            url = api_address + city
+            json_data = requests.get(url).json()
+            kelvin_res = json_data["main"]["temp"]
+            feels_like = json_data["main"]["feels_like"]
+            description = json_data["weather"][0]["description"]
+            celcius_res = kelvin_res - 273.15
+            max_temp = json_data["main"]["temp_max"]
+            min_temp = json_data["main"]["temp_min"]
+            visibility = json_data["visibility"]
+            pressure = json_data["main"]["pressure"]
+            humidity = json_data["main"]["humidity"]
+            wind_speed = json_data["wind"]["speed"]
+
+            return(
+                f"The current temperature of {city} is %.1f degree celcius with {description}" % celcius_res)
+
+        def stepWiseCalculus(query):
+            query = query.replace("+", "%2B")
+            try:
+                try:
+                    api_address = f"https://api.wolframalpha.com/v2/query?appid=Y98QH3-24PWX83VGA&input={query}&podstate=Step-by-step%20solution&output=json&format=image"
+                    json_data = requests.get(api_address).json()
+                    answer = json_data["queryresult"]["pods"][0]["subpods"][1]["img"]["src"]
+                    answer = answer.replace("sqrt", "√")
+
+                    if(thread_type == ThreadType.USER):
+                        self.sendRemoteFiles(
+                            file_urls=answer, message=None, thread_id=thread_id, thread_type=ThreadType.USER)
+                    elif(thread_type == ThreadType.GROUP):
+                        self.sendRemoteFiles(
+                            file_urls=answer, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
+                except:
+                    pass
+                try:
+                    api_address = f"http://api.wolframalpha.com/v2/query?appid=Y98QH3-24PWX83VGA&input={query}&podstate=Result__Step-by-step+solution&format=plaintext&output=json"
+                    json_data = requests.get(api_address).json()
+                    answer = json_data["queryresult"]["pods"][0]["subpods"][0]["img"]["src"]
+                    answer = answer.replace("sqrt", "√")
+
+                    if(thread_type == ThreadType.USER):
+                        self.sendRemoteFiles(
+                            file_urls=answer, message=None, thread_id=thread_id, thread_type=ThreadType.USER)
+                    elif(thread_type == ThreadType.GROUP):
+                        self.sendRemoteFiles(
+                            file_urls=answer, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
+
+                except:
+                    try:
+                        answer = json_data["queryresult"]["pods"][1]["subpods"][1]["img"]["src"]
+                        answer = answer.replace("sqrt", "√")
+
+                        if(thread_type == ThreadType.USER):
+                            f
+                            self.sendRemoteFiles(
+                                file_urls=answer, message=None, thread_id=thread_id, thread_type=ThreadType.USER)
+                        elif(thread_type == ThreadType.GROUP):
+                            self.sendRemoteFiles(
+                                file_urls=answer, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
+
+                    except:
+                        pass
+            except:
+                pass
+
+        def stepWiseAlgebra(query):
+            query = query.replace("+", "%2B")
+            api_address = f"http://api.wolframalpha.com/v2/query?appid=Y98QH3-24PWX83VGA&input=solve%203x^2+4x-6=0&podstate=Result__Step-by-step+solution&format=plaintext&output=json"
+            json_data = requests.get(api_address).json()
+            try:
+                answer = json_data["queryresult"]["pods"][1]["subpods"][2]["plaintext"]
+                answer = answer.replace("sqrt", "√")
+
+                self.send(Message(text=answer), thread_id=thread_id,
+                          thread_type=thread_type)
+
+            except Exception as e:
+                pass
+            try:
+                answer = json_data["queryresult"]["pods"][1]["subpods"][3]["plaintext"]
+                answer = answer.replace("sqrt", "√")
+
+                self.send(Message(text=answer), thread_id=thread_id,
+                          thread_type=thread_type)
+
+            except Exception as e:
+                pass
+            try:
+                answer = json_data["queryresult"]["pods"][1]["subpods"][4]["plaintext"]
+                answer = answer.replace("sqrt", "√")
+
+                self.send(Message(text=answer), thread_id=thread_id,
+                          thread_type=thread_type)
+
+            except Exception as e:
+                pass
+            try:
+                answer = json_data["queryresult"]["pods"][1]["subpods"][1]["plaintext"]
+                answer = answer.replace("sqrt", "√")
+
+                self.send(Message(text=answer), thread_id=thread_id,
+                          thread_type=thread_type)
+
+            except Exception as e:
+                pass
+            try:
+                answer = json_data["queryresult"]["pods"][1]["subpods"][0]["plaintext"]
+                answer = answer.replace("sqrt", "√")
+
+                self.send(Message(text=answer), thread_id=thread_id,
+                          thread_type=thread_type)
+
+            except Exception as e:
+                pass
+
+        def stepWiseQueries(query):
+            query = query.replace("+", "%2B")
+            api_address = f"http://api.wolframalpha.com/v2/query?appid=Y98QH3-24PWX83VGA&input={query}&podstate=Result__Step-by-step+solution&format=plaintext&output=json"
+            json_data = requests.get(api_address).json()
+            try:
+                try:
+                    answer = json_data["queryresult"]["pods"][0]["subpods"][0]["plaintext"]
+                    answer = answer.replace("sqrt", "√")
+                    self.send(Message(text=answer), thread_id=thread_id,
+                              thread_type=thread_type)
+
+                except Exception as e:
+                    pass
+                try:
+                    answer = json_data["queryresult"]["pods"][1]["subpods"][0]["plaintext"]
+                    answer = answer.replace("sqrt", "√")
+
+                    self.send(Message(text=answer), thread_id=thread_id,
+                              thread_type=thread_type)
+
+                except Exception as e:
+                    pass
+                try:
+                    answer = json_data["queryresult"]["pods"][1]["subpods"][1]["plaintext"]
+                    answer = answer.replace("sqrt", "√")
+
+                    self.send(Message(text=answer), thread_id=thread_id,
+                              thread_type=thread_type)
+
+                except Exception as e:
+                    pass
+            except:
+                self.send(Message(text="Cannot find the solution of this problem"), thread_id=thread_id,
+                          thread_type=thread_type)
+
+        try:
+            def searchForUsers(self, name=" ".join(msg.split()[2:4]), limit=10):
+                try:
+                    limit = int(msg.split()[4])
+                except:
+                    limit = 10
+                params = {"search": name, "limit": limit}
+                (j,) = self.graphql_requests(
+                    _graphql.from_query(_graphql.SEARCH_USER, params))
+                users = ([User._from_graphql(node)
+                          for node in j[name]["users"]["nodes"]])
+                for user in users:
+                    reply = f"{user.name} profile_link: {user.url}\n friend: {user.is_friend}\n"
+                    self.send(Message(text=reply), thread_id=thread_id,
+                              thread_type=thread_type)
+        except:
+            pass
+
+        def programming_solution(self, query):
+            try:
+                count = int(msg.split()[-1])
+            except:
+                count = 6
+            try:
+                x = int(query.split()[-1])
+                if type(x) == int:
+                    query = " ".join(msg.split()[0:-1])
+            except:
+                pass
+            image_urls = []
+
+            url = "https://bing-image-search1.p.rapidapi.com/images/search"
+
+            querystring = {"q": query, "count": str(count)}
+
+            headers = {
+                'x-rapidapi-host': "bing-image-search1.p.rapidapi.com",
+                'x-rapidapi-key': "801ba934d6mshf6d2ea2be5a6a40p188cbejsn09635ee54c45"
+            }
+            response = requests.request(
+                "GET", url, headers=headers, params=querystring)
+            data = json.loads(response.text)
+            img_contents = (data["value"])
+            # print(img_contents)
+            for img_url in img_contents:
+                image_urls.append(img_url["contentUrl"])
+                print("appended..")
+
+            def multiThreadImg(img_url):
+                if(thread_type == ThreadType.USER):
+                    self.sendRemoteFiles(
+                        file_urls=img_url, message=None, thread_id=thread_id, thread_type=ThreadType.USER)
+                elif(thread_type == ThreadType.GROUP):
+                    self.sendRemoteFiles(
+                        file_urls=img_url, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
+
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                executor.map(multiThreadImg, image_urls)
+
+        def translator(self, query, target):
+            query = " ".join(query.split()[1:-2])
+            url = "https://microsoft-translator-text.p.rapidapi.com/translate"
+
+            querystring = {"to": target, "api-version": "3.0",
+                           "profanityAction": "NoAction", "textType": "plain"}
+
+            payload = f'[{{"Text": "{query}"}}]'
+
+            headers = {
+                'content-type': "application/json",
+                'x-rapidapi-host': "microsoft-translator-text.p.rapidapi.com",
+                'x-rapidapi-key': "801ba934d6mshf6d2ea2be5a6a40p188cbejsn09635ee54c45"
+            }
+
+            response = requests.request(
+                "POST", url, data=payload, headers=headers, params=querystring)
+
+            json_response = eval(response.text)
+
+            return json_response[0]["translations"][0]["text"]
+
+        def imageSearch(self, msg):
+            try:
+                count = int(msg.split()[-1])
+            except:
+                count = 10
+            query = " ".join(msg.split()[2:])
+            try:
+                x = int(query.split()[-1])
+                if type(x) == int:
+                    query = " ".join(msg.split()[2:-1])
+            except:
+                pass
+            image_urls = []
+
+            url = "https://bing-image-search1.p.rapidapi.com/images/search"
+
+            querystring = {"q": query, "count": str(count)}
+
+            headers = {
+                'x-rapidapi-host': "bing-image-search1.p.rapidapi.com",
+                'x-rapidapi-key': "801ba934d6mshf6d2ea2be5a6a40p188cbejsn09635ee54c45"
+            }
+            print("sending requests...")
+            response = requests.request(
+                "GET", url, headers=headers, params=querystring)
+            print("got response..")
+            data = json.loads(response.text)
+            img_contents = (data["value"])
+            # print(img_contents)
+            for img_url in img_contents:
+                image_urls.append(img_url["contentUrl"])
+                print("appended..")
+
+            def multiThreadImg(img_url):
+                if(thread_type == ThreadType.USER):
+                    self.sendRemoteFiles(
+                        file_urls=img_url, message=None, thread_id=thread_id, thread_type=ThreadType.USER)
+                elif(thread_type == ThreadType.GROUP):
+                    self.sendRemoteFiles(
+                        file_urls=img_url, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
+
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                executor.map(multiThreadImg, image_urls)
 
         def searchFiles(self):
             query = " ".join(msg.split()[2:])
@@ -82,7 +405,31 @@ class ChatBot(Client):
         try:
             if("search pdf" in msg):
                 searchFiles(self)
-
+            elif("download youtube" in msg):
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+                link = "".join(msg.split()[-3:])
+                yt_url = link
+                print("yt", yt_url)
+                try:
+                    yt_url = yt_url.replace(
+                        "youtu.be/", "www.youtube.com/watch?v=")
+                except:
+                    pass
+                yt_url = yt_url.replace("youtube", "clipmega")
+                url = requests.get(yt_url, headers=headers)
+                soup = BeautifulSoup(url.text, "html.parser")
+                link = soup.select(".btn-group > a")
+                link = link[0]
+                link = str(link)
+                indx = link.find("href=")
+                indx_l = link.find("extension=mp4")
+                link = link[indx+6:indx_l+13].replace("amp;", "")
+                link = link.replace(" ", "%20")
+                final_link = link
+                print("final", final_link)
+                self.sendRemoteFiles(
+                    file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
             elif("search image" in msg):
                 imageSearch(self, msg)
 
@@ -128,53 +475,11 @@ class ChatBot(Client):
             elif ("busy" in msg):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
-            elif ("akhil" in msg):
-                reply = "Akhiil to riyan ka beta hai :)."
-                sendMsg()
-            elif ("ishita" in msg):
-                reply = "Kammo and ishita are One heart and One soul <3."
-                sendMsg()
-            elif ("i love u" in msg):
-                reply = "I love you more <3"
-                sendMsg()
-            elif ("really love me" in msg):
-                reply = "yes i do <3"
-                sendMsg()
-            elif ("hi bot" in msg):
-                reply = "hello i'm here :)"
-                sendMsg()
-            elif ("No" in msg):
-                reply = "Yes!"
-                sendMsg()
-            elif ("who is atif" in msg):
-                reply = "Oh Atif The God  Father of Haters kid."
-                sendMsg()
-            elif ("gand dede" in msg):
-                reply = "land lele bhai :)."
-                sendMsg()
-            elif ("akku" in msg):
-                reply = "love you akku (akhil) 😘❤️"
-                sendMsg()
-            elif ("i'm sad" in msg):
-                reply = "Don't worry i am with you."
-                sendMsg()
-            elif ("i love you" in msg):
-                reply = "I love you too <3"
-                sendMsg()
-            elif ("riyaan" in msg):
-                reply = "Akhiil ka beta he riyaan "
-                sendMsg()
-            elif ("who is kammo" in msg):
-                reply = "Kammo is my second love :)"
-                sendMsg()
             elif("help" in msg):
                 reply = "Sure! What should I do?"
                 sendMsg()
-            elif("rachit" in msg):
-                reply = "wahi rachit jo ek number ka gandu hai??"
-                sendMsg()
-            elif("boyfriend" in msg):
-                reply = "Kojou is my boyfriend"
+            elif("clever" in msg):
+                reply = "Yes, i am clever. hope you will be clever soon."
                 sendMsg()
             elif("crazy" in msg):
                 reply = "Anything wrong about that."
@@ -186,7 +491,7 @@ class ChatBot(Client):
                 reply = "Yes, if you are nice and kind girl. But if you are boy RIP."
                 sendMsg()
             elif ("you from" in msg):
-                reply = "I am from India. Currently living in Kathmandu"
+                reply = "I am from Nepal. Currently living in Kathmandu"
                 sendMsg()
             elif ("you sure" in msg):
                 reply = "Yes. I'm sure."
@@ -351,9 +656,9 @@ class ChatBot(Client):
 cookies = {
     "sb": "xasyYmAoy1tRpMGYvLxgkHBF",
     "fr": "0NxayJuewRHQ30OX3.AWVJwIYNh0Tt8AJv6kSwDamhkoM.BiMrVd.Iu.AAA.0.0.BiMtVZ.AWXMVaiHrpQ",
-    "c_user": "100077465853624",
+    "c_user": "",
     "datr": "xasyYs51GC0Lq5H5lvXTl5zA",
-    "xs": "39%3AYKuia2tT7sRzng%3A2%3A1666800840%3A-1%3A4136%3A%3AAcVX2xzjnGcZqD_hPtmZH3uzvKbsGASsWXkgJoTX_g"
+    "xs": ""
 }
 
 
