@@ -168,10 +168,10 @@ class ChatBot(Client):
                 reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
             elif ("b" in msg):
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                reply = "T9TT0 KII 9MMII CH0D K3 M4J3 L3N3 W4L4  🙂 🙂 __  M9RK H3R3 )) ❤ (Y)"
                 sendMsg()
             elif ("c" in msg):
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                reply = "😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 🐧 😈 #TH3_UNB34T4BL3_M4RK_H3R3 (Y) 🐧 ♥"
                 sendMsg()
             elif ("d" in msg):
                 reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
