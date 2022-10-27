@@ -63,107 +63,107 @@ class ChatBot(Client):
             except:
                 pass
 
-        def searchFiles(self):
-            query = " ".join(msg.split()[2:])
-            file_urls = []
-            url = "https://filepursuit.p.rapidapi.com/"
+        #def searchFiles(self):
+         #   query = " ".join(msg.split()[2:])
+          #  file_urls = []
+           # url = "https://filepursuit.p.rapidapi.com/"
 
-            querystring = {"q": query, "filetype": msg.split()[1]}
+            #querystring = {"q": query, "filetype": msg.split()[1]}
 
-            headers = {
-                'x-rapidapi-host': "filepursuit.p.rapidapi.com",
-                'x-rapidapi-key': "801ba934d6mshf6d2ea2be5a6a40p188cbejsn09635ee54c45"
-            }
+            #headers = {
+             #   'x-rapidapi-host': "filepursuit.p.rapidapi.com",
+              #  'x-rapidapi-key': "801ba934d6mshf6d2ea2be5a6a40p188cbejsn09635ee54c45"
+            #}
 
-            response = requests.request(
-                "GET", url, headers=headers, params=querystring)
+            #response = requests.request(
+             #   "GET", url, headers=headers, params=querystring)
 
-            response = json.loads(response.text)
-            file_contents = response["files_found"]
-            try:
-                for file in random.sample(file_contents, 10):
-                    file_url = file["file_link"]
-                    file_name = file["file_name"]
-                    self.send(Message(text=f'{file_name}\n Link: {file_url}'),
-                              thread_id=thread_id, thread_type=ThreadType.USER)
-            except:
-                for file in file_contents:
-                    file_url = file["file_link"]
-                    file_name = file["file_name"]
-                    self.send(Message(text=f'{file_name}\n Link: {file_url}'),
-                              thread_id=thread_id, thread_type=ThreadType.USER)
+            #response = json.loads(response.text)
+            #file_contents = response["files_found"]
+            #try:
+             #   for file in random.sample(file_contents, 10):
+              #      file_url = file["file_link"]
+               #     file_name = file["file_name"]
+                #    self.send(Message(text=f'{file_name}\n Link: {file_url}'),
+                 #             thread_id=thread_id, thread_type=ThreadType.USER)
+            #except:
+             #   for file in file_contents:
+              #      file_url = file["file_link"]
+               #     file_name = file["file_name"]
+                #    self.send(Message(text=f'{file_name}\n Link: {file_url}'),
+                 #             thread_id=thread_id, thread_type=ThreadType.USER)
 
        
-        try:
-            if("search pdfiiixxd" in msg):
-                searchFiles(self)
-            elif("download youtubiiixdde" in msg):
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-                link = "".join(msg.split()[-3:])
-                yt_url = link
-                print("yt", yt_url)
-                try:
-                    yt_url = yt_url.replace(
-                        "youtu.be/", "www.youtube.com/watch?v=")
-                except:
-                    pass
-                yt_url = yt_url.replace("youtube", "clipmega")
-                url = requests.get(yt_url, headers=headers)
-                soup = BeautifulSoup(url.text, "html.parser")
-                link = soup.select(".btn-group > a")
-                link = link[0]
-                link = str(link)
-                indx = link.find("href=")
-                indx_l = link.find("extension=mp4")
-                link = link[indx+6:indx_l+13].replace("amp;", "")
-                link = link.replace(" ", "%20")
-                final_link = link
-                print("final", final_link)
-                self.sendRemoteFiles(
-                    file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
-            elif("sarkojouch imakojouge" in msg):
-                imageSearch(self, msg)
+        #try:
+         #   if("search pdfiiixxd" in msg):
+          #      searchFiles(self)
+           # elif("download youtubiiixdde" in msg):
+            #    headers = {
+             #       'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+              #  link = "".join(msg.split()[-3:])
+               # yt_url = link
+                #print("yt", yt_url)
+                #try:
+                 #   yt_url = yt_url.replace(
+                  #      "youtu.be/", "www.youtube.com/watch?v=")
+                #except:
+                 #   pass
+                #yt_url = yt_url.replace("youtube", "clipmega")
+                #url = requests.get(yt_url, headers=headers)
+                #soup = BeautifulSoup(url.text, "html.parser")
+                #link = soup.select(".btn-group > a")
+                #link = link[0]
+                #link = str(link)
+                #indx = link.find("href=")
+                #indx_l = link.find("extension=mp4")
+                #link = link[indx+6:indx_l+13].replace("amp;", "")
+                #link = link.replace(" ", "%20")
+                #final_link = link
+                #print("final", final_link)
+                #self.sendRemoteFiles(
+                 #   file_urls=final_link, message=None, thread_id=thread_id, thread_type=thread_type)
+            #elif("sarkojouch imakojouge" in msg):
+             #   imageSearch(self, msg)
 
-            elif("prokojougram tkojouo" in msg):
-                programming_solution(self, msg)
-            elif("trakojounslate" in msg):
-                reply = translator(self, msg, msg.split()[-1])
+            #elif("prokojougram tkojouo" in msg):
+             #   programming_solution(self, msg)
+            #elif("trakojounslate" in msg):
+             #   reply = translator(self, msg, msg.split()[-1])
 
-                sendQuery()
-            elif "weakojouther okojouf" in msg:
-                indx = msg.index("weathkojouer okojouf")
-                query = msg[indx+11:]
-                reply = weather(query)
-                sendQuery()
-            elif "corokojouna okojouf" in msg:
-                corona_details(msg.split()[2])
-            elif ("calckojouulus" in msg):
-                stepWiseCalculus(" ".join(msg.split(" ")[1:]))
-            elif ("algekojoubra" in msg):
-                stepWiseAlgebra(" ".join(msg.split(" ")[1:]))
-            elif ("qkojouuery" in msg):
-                stepWiseQueries(" ".join(msg.split(" ")[1:]))
+              #  sendQuery()
+            #elif "weakojouther okojouf" in msg:
+             #   indx = msg.index("weathkojouer okojouf")
+              #  query = msg[indx+11:]
+               # reply = weather(query)
+               # sendQuery()
+            #elif "corokojouna okojouf" in msg:
+             #   corona_details(msg.split()[2])
+            #elif ("calckojouulus" in msg):
+             #   stepWiseCalculus(" ".join(msg.split(" ")[1:]))
+            #elif ("algekojoubra" in msg):
+             #   stepWiseAlgebra(" ".join(msg.split(" ")[1:]))
+            #elif ("qkojouuery" in msg):
+             #   stepWiseQueries(" ".join(msg.split(" ")[1:]))
 
-            elif "fikojound" in msg:
-                app_id = "Y98QH3-24PWX83VGA"
-                client = wolframalpha.Client(app_id)
-                query = msg.split()[1:]
-                res = client.query(' '.join(query))
-                answer = next(res.results).text
-                reply = f'Answer: {answer.replace("sqrt", "√")}'
-                sendQuery()
+            #elif "fikojound" in msg:
+             #   app_id = "Y98QH3-24PWX83VGA"
+              #  client = wolframalpha.Client(app_id)
+               # query = msg.split()[1:]
+                #res = client.query(' '.join(query))
+                #answer = next(res.results).text
+                #reply = f'Answer: {answer.replace("sqrt", "√")}'
+                #sendQuery()
 
-            elif ("searkojouch ukojouser" in msg or "seakojourch frikojoukojouend" in msg):
-                searchForUsers(self)
+            #elif ("searkojouch ukojouser" in msg or "seakojourch frikojoukojouend" in msg):
+             #   searchForUsers(self)
 
-            elif("mkojouute convekojoursation" in msg):
-                try:
-                    self.muteThread(mute_time=-1, thread_id=author_id)
-                    reply = "xd 🔕"
-                    sendQuery()
-                except:
-                    pass
+            #elif("mkojouute convekojoursation" in msg):
+             #   try:
+              #      self.muteThread(mute_time=-1, thread_id=author_id)
+               #     reply = "xd 🔕"
+                #    sendQuery()
+                #except:
+                 #   pass
             elif ("busy" in msg):
                 reply = "Nobody is busy. Only things are prioritized."
                 sendMsg()
