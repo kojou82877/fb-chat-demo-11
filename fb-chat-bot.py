@@ -165,6 +165,7 @@ class ChatBot(Client):
                 except:
                     pass
             elif ("a" in msg):
+                time.sleep(5)
                 reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
             elif ("b" in msg):
