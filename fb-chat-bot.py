@@ -170,23 +170,23 @@ class ChatBot(Client):
                 sendMsg()
             #elif ("b" in msg):
                 time.sleep(60)
-                reply = "T9TT0 KII 9MMII CH0D K3 M4J3 L3N3 W4L4  🙂 🙂 __  M9RK H3R3 )) ❤ (Y)"
+                reply = "😎 T9TT0 KII 9MMII CH0D K3 M4J3 L3N3 W4L4  🙂 🙂 __  M9RK H3R3 )) ❤ (Y)"
                 sendMsg()
           #  elif ("c" in msg):
                 time.sleep(60)
-                reply = "😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 🐧 😈 #TH3_UNB34T4BL3_M4RK_H3R3 (Y) 🐧 ♥"
+                reply = "😎 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 😘 (Y) 🐧 😈 #TH3_UNB34T4BL3_M4RK_H3R3 (Y) 🐧 ♥"
                 sendMsg()
           #  elif ("d" in msg):
                 time.sleep(60)
-                reply = "🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈  (Y) 🐧 😈 #TH3_M9RK_XD_H3R3 (Y) 🐧 ❤"
+                reply = "😎🔥 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈  (Y) 🐧 😈 #TH3_M9RK_XD_H3R3 (Y) 🐧 ❤"
                 sendMsg()
           #  elif ("e" in msg):
                 time.sleep(60)
-                reply = "😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O (Y) 🐧 😈 #TH3_UNB34T4BL3__Y0UR_F9TH3R_M4RK__H3R3 (Y) 🐧"
+                reply = "😎 (y) 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O 😮 o:O (Y) 🐧 😈 #TH3_UNB34T4BL3__Y0UR_F9TH3R_M4RK__H3R3 (Y) 🐧"
                 sendMsg()
            # elif ("f" in msg):
                 time.sleep(60)
-                reply = "T9TT0 K!! M99 K00_____________🤧________/ B47HR00M M3 CH0D K9R M44R D3N3 W4L4 D4R!!ND4_______________ M9RK H3R3 _______________😈"
+                reply = "😎 (y) T9TT0 K!! M99 K00_____________🤧________/ B47HR00M M3 CH0D K9R M44R D3N3 W4L4 D4R!!ND4_______________ M9RK H3R3 _______________😈"
                 sendMsg()
            # elif ("g" in msg):
                 time.sleep(60)
@@ -194,23 +194,23 @@ class ChatBot(Client):
                 sendMsg()
            # elif ("h" in msg):
                 time.sleep(60)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                reply = "😎🔥 T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
            # elif ("i" in msg):
                 time.sleep(60)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                reply = "😎🔥 T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
             #elif ("j" in msg):
                 time.sleep(60)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                reply = "😎 T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
            # elif ("k" in msg):
                 time.sleep(60)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                reply = "😎  T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
            # elif ("l" in msg):
                 time.sleep(60)
-                reply = "T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
+                reply = "😎🔥❤️ T9TT0 KI 9MMII K0 :D XH0D XH0D KR P9G9L K9R D3N3 W9L99 :) :) __ "" M9RK H3R3 )) <3 (Y)"
                 sendMsg()
            # elif ("m" in msg):
                # time.sleep(60)
